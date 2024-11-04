@@ -1124,8 +1124,8 @@ class BluetoothPeripheral internal constructor(
         // Get the Client Characteristic Configuration Descriptor for the characteristic
         val descriptor = characteristic.getDescriptor(CCC_DESCRIPTOR_UUID)
         if (descriptor == null) {
-            val message = String.format("could not get CCC descriptor for characteristic %s", characteristic.uuid)
-            throw IllegalArgumentException(message)
+            bluetoothGatt?.setCharacteristicNotification(characteristic, enable)
+            return true
         }
 
         // Check if characteristic has NOTIFY or INDICATE properties and set the correct byte value to be written
