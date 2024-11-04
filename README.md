@@ -35,6 +35,13 @@ The `BluetoothBytesParser` class is a utility class that makes parsing byte arra
 
 The BLESSED library was inspired by CoreBluetooth on iOS and provides the same level of abstraction, but at the same time it also stays true to Android by keeping most methods the same and allowing you to work with the standard classes for Services, Characteristics and Descriptors. If you already have developed using CoreBluetooth you can very easily port your code to Android using this library.
 
+## Change
+To deal with no CCC descriptor error,i changed the way handle the no CCC descriptor problem
+
+Related Issue here:
+[https://github.com/weliem/blessed-android/issues/30](https://github.com/weliem/blessed-android/issues/30)
+[https://github.com/PhilipsHue/flutter_reactive_ble/issues/188](https://github.com/PhilipsHue/flutter_reactive_ble/issues/188)
+
 ## Installation
 
 This library is available on Jitpack. This library also uses Timber for logging. So include the following in your gradle configuration:
